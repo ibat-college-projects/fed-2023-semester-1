@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        // Define behaviour or a routine or a process within a function - a bit like recipe
+        // And it will do something with the inputs and possibly give something back
+        // But you need to CALL it in order for it to be invoked
+
+        function AgeToCentury(age, targetAge) {
+            // console.log(`AgeToCentury() is called`)
+
+            let yearsToTargetAge = targetAge - age;
+            let ageMessage = `I am ${age} years old and I will be ${targetAge} in ${yearsToTargetAge} years`;
+
+
+            return ageMessage;
+        }
+
+        let message = '';
+        message = AgeToCentury(60, 100); console.log(message);
+        message = AgeToCentury(70, 150); console.log(message);
+        message = AgeToCentury(10, 18); console.log(message);
+
+
+        const PRICE_OF_ITEM = 70; // const means value cannot be changed elsewhere in code, convention means consts are in CAPS
+
+        if (PRICE_OF_ITEM == 50) {
+            console.log(`Just Right`);
+        } else if (PRICE_OF_ITEM > 50) {
+            console.log(`Expensive`);
+        } else {
+            console.log(`Cheaper than I thought`);
+        }
+
+        // let ShouldIBuyIt = false;
+        // if (PRICE_OF_ITEM == 50) { 
+        //     ShouldIBuyIt=true;
+        // }
+
+        let ShouldIBuyIt = false;
+        if (PRICE_OF_ITEM == 50) {
+            console.log(`Just Right`);
+            ShouldIBuyIt = true;
+        } else if (PRICE_OF_ITEM > 50) {
+            console.log(`Expensive`);
+        } else {
+            console.log(`Cheaper than I thought`);
+        }
+
+        // function CanIBuyItWithMyPocketMoney(pocketMoney, priceOfItem) {
+
+        //     let canIBuyIt = false;
+
+        //     if (pocketMoney >= priceOfItem) {
+        //         canIBuyIt = true;
+        //     }
+
+        //     return canIBuyIt;
+
+        // }
+
+
+        function CanIBuyItWithMyPocketMoney(pocketMoney, priceOfItem) {
+
+            return pocketMoney >= priceOfItem;
+
+        }
+
+
+        let result = CanIBuyItWithMyPocketMoney(100, 150);
+        //method 1
+        if (result == true) {
+            console.log("I can buy item.")
+        }
+        //method 2
+        if (result) {
+            console.log("I can buy item.")
+        }
+        //method 3
+        if (CanIBuyItWithMyPocketMoney(100, 150)) {
+            console.log("I can buy item.")
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
