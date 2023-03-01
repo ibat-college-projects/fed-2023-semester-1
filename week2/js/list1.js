@@ -12,3 +12,4 @@ fruit[2]="banana";
 console.log(`The first piece of fruit is ${fruit[0]}`);
 console.log(`The second piece of fruit is ${fruit[1]}`);
 console.log(`The third piece of fruit is ${fruit[2]}`); // notice the index position is 1 behind the count of items
+
