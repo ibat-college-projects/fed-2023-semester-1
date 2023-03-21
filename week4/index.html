@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/site.js"></script>
+    <script src="./js/list.js"></script>
+    <script src="./js/button.js"></script>
     <title>Document</title>
 </head>
 <body onload="init()">
     
-    <div id="listOfItems">?</div>
+<button onclick="renderCity(0)">Render Item</button>
 
+    <div id="listOfItems">?</div>
+    <div id="listOfItemsWithIndex">?</div>
+    <div id="cityDetail">?</div>
+<hr/>
+
+<input type="text" id="tbAddCity" /> <br />
+<button onclick="btnAddCity()">Add City</button>
+
+
+<hr/>
+
+<select name="" id="selectListOfCities" 
+onchange="OnCityChange(this)">
+    <option value="">Please select a city</option>
+ 
+</select>
+<!-- https://bit.ly/42wMb0A -->
 </body>
 </html>
