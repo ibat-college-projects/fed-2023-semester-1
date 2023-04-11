@@ -47,13 +47,30 @@ function SetupPizzaOptions() {
     $('#selectMeatOptions').on('click', function () {
 
 
-        $('input:checkbox').not(this).prop('checked', this.checked)
+      //  $('input:checkbox').not(this).prop('checked', this.checked)
+        $('input:checkbox.meatOption').prop('checked', this.checked)
 
-        const numberOfCheckedItems = $('input:checkbox:checked').not(this).length;
+        let numberOfCheckedItems = $('input:checkbox:checked.meatOption').length;
 
+        numberOfCheckedItems += $('input:checkbox:checked.vegOption').length;
         WriteToMessagePanel(`Total options selected: ${numberOfCheckedItems}`)
 
     })
+
+    $('#selectVegOptions').on('click', function () {
+
+
+        //  $('input:checkbox').not(this).prop('checked', this.checked)
+          $('input:checkbox.vegOption').prop('checked', this.checked)
+  
+        //   let numberOfCheckedItems = $('input:checkbox:checked.vegOption').length;
+        //   numberOfCheckedItems += $('input:checkbox:checked.meatOption').length;
+
+          let numberOfCheckedItems = $('input:checkbox:checked.pizzaOption').length;
+       
+          WriteToMessagePanel(`Total options selected: ${numberOfCheckedItems}`)
+  
+      })
 
     $('.meatOption').on('click', function () {
 
